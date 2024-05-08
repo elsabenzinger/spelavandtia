@@ -1,0 +1,19 @@
+{
+  "database": {
+    "rules": "/js/firebase/database.rules.json"
+  },
+  "hosting": {
+    "public": "../spelavandtia",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

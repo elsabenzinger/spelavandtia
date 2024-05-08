@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Spela Vändtia!</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="js/app.js" type="text/jsx"></script>
+    <script src="js/deckSource.js" type="text/jsx"></script>
+    <script src="js/gameModel.js" type="text/jsx"></script>
+    <script src="js/show.js" type="text/jsx"></script>
+    <script src="js/profileModel.js" type="text/jsx"></script>
+    <script src="js/useModelProperty.js" type="text/jsx"></script>
+    <script src="js/usePromise.js"></script>
+    <script src="js/firebase/firebaseConfig.js"></script>
+    <script src="js/firebase/firebaseModel.js" type="text/jsx"></script>
+    <script src="js/firebase/persistProfile.js" type="text/jsx"></script>
+    <script src="js/firebase/users.js" type="text/jsx"></script>
+    <script src="js/PlayPileUtil.js" type="text/jsx"></script>
+    <script src="js/presenters/logInPresenter.js" type="text/jsx"></script>
+    <script src="js/presenters/gameMenuPresenter.js" type="text/jsx"></script>
+    <script src="js/presenters/mainPresenter.js" type="text/jsx"></script>
+    <script src="js/presenters/opponentPresenter.js" type="text/jsx"></script>
+    <script src="js/presenters/playerPresenter.js" type="text/jsx"></script>
+    <script src="js/presenters/profilePresenter.js" type="text/jsx"></script>
+    <script src="js/presenters/rulesPresenter.js" type="text/jsx"></script>
+    <script src="js/presenters/signUpPresenter.js" type="text/jsx"></script>
+    <script src="js/presenters/tablePresenter.js" type="text/jsx"></script>
+    <script src="js/views/gameMenuView.js" type="text/jsx"></script>
+    <script src="js/views/logInView.js" type="text/jsx"></script>
+    <script src="js/views/mainView.js" type="text/jsx"></script>
+    <script src="js/views/opponentView.js" type="text/jsx"></script>
+    <script src="js/views/playerView.js" type="text/jsx"></script>
+    <script src="js/views/profileView.js" type="text/jsx"></script>
+    <script src="js/views/rulesView.js" type="text/jsx"></script>
+    <script src="js/views/signUpView.js" type="text/jsx"></script>
+    <script src="js/views/tableView.js" type="text/jsx"></script>
+    <link rel="stylesheet" href="style.css"></link>
+  </head>
+  <body>
+    <div id="app">
+    </div>
+
+      <!-- Initialize Firebase -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+
+
+  </body>
+
+  <script type="text/jsx">
+    const gameModel = new GameModel();
+    const profileModel = new ProfileModel();
+    FirebaseModel.persistModel(gameModel);
+    ReactDOM.render(<App model={gameModel} profileModel={profileModel}/>, document.getElementById("app"));
+  </script>
+</html>

@@ -1,0 +1,427 @@
+body{
+  width: 100%;
+  height: 100%;
+  font-family: "trebuchet ms";
+  margin: 0;
+  overflow: scroll;
+}
+
+button{
+  font-family: "trebuchet ms";
+  background-color: #528670;
+  color: white;
+  margin: 5px;
+  border-radius: 7px;
+  border: none;
+  padding: 5px;
+}
+
+button:hover{
+  background-color: #335f4d;
+  cursor: pointer;
+}
+
+.notMyTurn{
+  opacity: 0.75;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+.main h1{
+  margin: auto;
+  margin-top: 20%;
+}
+.main button{
+ margin: auto;
+ margin-top: 1%;
+ width: 15%;
+ height: 15%;
+}
+
+.inputbox{
+  border: solid black;
+  border-radius: 7px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.textbox{
+  margin: 10%;
+}
+
+.rulesBox{
+  margin: 15% auto;
+  width: 30vw;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileBox{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.backgroundBox{
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #8fcadd;
+}
+
+.savedGames{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.x{
+  position: absolute;
+  right: 34.5vw;
+  top: 14vw;
+  color: grey;
+}
+
+.x:hover{
+  cursor: pointer;
+}
+
+.backgroundBox h2{
+  margin-left: 4vw;
+}
+
+.gameBox{
+  width: 40vw;
+  border-color: #8fcadd;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 7px;
+  margin-bottom: 3vh;
+  display: flex;
+  align-items: center;
+  transition: width 0.5s, box-shadow 0.25s;
+}
+
+.gameBox p{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.date{
+  position: absolute;
+  right: 45vw;
+  color: #acacac;
+}
+
+.gameBox:hover{
+    width: 41vw;
+    border-bottom: 0;
+    border-right: 0px;
+    box-shadow: 3px 3px #44a6c6;
+    height: 7vh;
+    margin-bottom: 3.3vh;
+}
+
+.back{
+  position: absolute;
+  width: 10vw;
+  left: 20px;
+  top: 10px;
+  background-color: #44a6c6;
+}
+.back:hover{
+    background-color: #30849f;
+}
+
+.gameBoxButtons{
+  position: absolute;
+  right: 30vw;
+}
+
+.profileGameButton{
+  background-color: #44a6c6;
+}
+
+.profileGameButton:hover{
+  background-color: #30849f;
+}
+
+.tableText{
+  display: flex;
+  justify-content: center;
+  margin: 3px;
+}
+
+.showMessage{
+  color: white;
+  width: 20vw;
+  background-color: rgb(36, 85, 46);
+  opacity: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  flex-direction: column;
+  transition: opacity 1s;
+}
+
+.hideMessage{
+  opacity: 0%;
+  transition: opacity 1s;
+}
+
+.cardSpace {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 30vw;
+  margin: 20px;
+}
+
+.cardsOver {/*Puts the face up table cards on t of the downfacing cards*/
+  position: absolute; 
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  top: 5px;
+  right: -5px;
+}
+
+.cards {
+  width: 8vw;
+  position: relative;
+  padding: 7px;
+}
+
+.hidden{
+  display: none;
+}
+
+.buttonSpace{
+  position: relative;
+}
+
+.buttonSpace .hidden{
+  display: none;
+}
+
+.buttonSpace .notHidden{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-57%, -85%);
+}
+
+.buttonSpace .notHiddenTable{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-57%, -175%);
+  }
+
+img.highlightedCard {
+  padding: 2px;
+  border: 2px;
+  border-radius: 5px;
+  border-style: dashed;
+  border-color: #90ee90;
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cardBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  border: none;
+  padding: 5px;
+  background-color: rgb(36, 85, 46);
+}
+
+.opponentCardBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+
+
+.menuHorisontal {
+  overflow: hidden;
+  background-color: rgb(124, 30, 30);
+  border-radius: 7px;
+  border: none;
+  width: 20vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.menuHorisontal btn {
+  display: block;
+  text-align: center;
+  padding: 10px 12px;
+}
+
+.menuHorisontal btn:hover {
+  background-color: rgb(75, 17, 17);
+  cursor: pointer;
+}
+
+.gamescreen{
+  width: 100%;
+  min-height: 100vh;/*vh = viewport height*/
+  height: 100%;
+  background-color: rgb(17, 66, 28);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.topContent{
+  width: 100%;
+  background-color: rgb(17, 66, 28);
+  color: white;
+  justify-content: center;
+}
+
+.createUser{
+    color: blue;
+}
+
+.createUser:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login{
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dangerButton{
+  background-color: #b80f0a;
+}
+
+.dangerButton:hover{
+  background-color: #8d021f;
+}
+
+.errorText{
+  background-color: #ffcccb;
+  color: #8d021f;
+}
+
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content.loser {
+    background-color: #8d021f;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: none;
+    border-radius: 7px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content.winner {
+    background-color: #008000;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: none;
+    border-radius: 7px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+@media screen and (max-width: 800px) {
+
+  .gamescreen{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+    padding-top: 0px;
+  }
+  .cardSpace {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80vw;
+  }
+  
+  .tableText{
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cards{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: 15vw;
+    margin: 0px;
+  }
+
+  .cardsOver {
+    flex-wrap: wrap;
+  }
+
+  .menuHorisontal{
+    display: flex;
+    flex-flow: column wrap;
+    flex-shrink: 3;
+    width: 90%;
+    position: sticky;
+    margin: auto;
+    flex-basis: auto;
+    }
+
+}
